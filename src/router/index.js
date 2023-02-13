@@ -1,16 +1,19 @@
 import {
   createHashRouter,
-  RouterProvider,
-  useRoutes
+  Navigate
 } from "react-router-dom";
 
 // 导入组件
 import CHDiscover from '@/pages/discover'
 import CHFriend from '@/pages/friend'
 import CHMine from '@/pages/mine'
-const routes = createHashRouter([
+const routes = [
   {
-    path: '/',
+    path: "/",
+    element: <Navigate to="/discover" />
+  },
+  {
+    path: '/discover',
     element: <CHDiscover />
   },
   {
@@ -20,7 +23,6 @@ const routes = createHashRouter([
   {
     path: '/mine',
     element: <CHMine />
-  },
-
-])
+  }
+]
 export default routes;
