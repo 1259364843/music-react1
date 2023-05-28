@@ -17,9 +17,9 @@ export default memo(function CHDiscover(props) {
 						);
 					})}
 				</TopMenu>
-				{/*路由出口*/}
-				<Outlet />
 			</div>
+			{/*路由出口*/}
+			<Outlet />
 		</DiscoverWrapper>
 	);
 });

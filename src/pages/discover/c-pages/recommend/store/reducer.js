@@ -5,6 +5,7 @@ import * as actionTypes from "./constants";
 const defaultState = Map({
 	// 轮播图
 	topBanners: [],
+	// 热门推荐
 	hotRecommends: [],
 	newAlbum: [],
 	topUpList: {},
@@ -20,6 +21,10 @@ export default (state = defaultState, action) => {
 			// state赋值
 			return state.set("topBanners", action.banners);
 		// return { ...state, topBanners: action.banners };
+		case actionTypes.CHANGE_HOT_RECOMMEND:
+			return state.set("hotRecommends", action.hotRecommends);
+		case actionTypes.CHANGE_NEW_ALBUM:
+			return state.set("newAlbums", action.newAlbums);
 		default:
 			return state;
 	}

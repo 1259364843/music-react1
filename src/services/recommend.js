@@ -12,12 +12,14 @@ export function getTopBanner() {
 	});
 }
 
+// 2.获取热门推荐数据
 export function getHotRecommend() {
 	return request({
 		url: "/personalized",
 	});
 }
 
+// 3.获取新碟上架
 export function getNewAlbum(limit, offset) {
 	return request({
 		url: "/top/album",
